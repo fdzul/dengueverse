@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>index</title>
+<title>Paquetes en R para la identificación de escenarios operativos</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -35,6 +35,35 @@ ul.task-list li input[type="checkbox"] {
 <link href="index_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="index_files/libs/bootstrap/bootstrap-769b268fb290e116fe386cf5612ac759.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -43,7 +72,7 @@ ul.task-list li input[type="checkbox"] {
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      
+      <h1 class="title">Paquetes en R para la identificación de escenarios operativos</h1>
             <p class="subtitle lead">Felipe Antonio Dzul Manzanilla | CVU 6172953</p>
                       </div>
   </div>
@@ -67,7 +96,18 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#actividad" id="toc-actividad" class="nav-link" data-scroll-target="#actividad"><span class="header-section-number">2</span> Actividad</a></li>
   <li><a href="#producto" id="toc-producto" class="nav-link" data-scroll-target="#producto"><span class="header-section-number">3</span> Producto</a></li>
   <li><a href="#material-métodos" id="toc-material-métodos" class="nav-link" data-scroll-target="#material-métodos"><span class="header-section-number">4</span> Material &amp; Métodos</a></li>
-  <li><a href="#resultados" id="toc-resultados" class="nav-link" data-scroll-target="#resultados"><span class="header-section-number">5</span> Resultados</a></li>
+  <li><a href="#resultados" id="toc-resultados" class="nav-link" data-scroll-target="#resultados"><span class="header-section-number">5</span> Resultados</a>
+  <ul class="collapse">
+  <li><a href="#rgeomex" id="toc-rgeomex" class="nav-link" data-scroll-target="#rgeomex"><span class="header-section-number">5.1</span> rgeomex</a></li>
+  <li><a href="#densnv" id="toc-densnv" class="nav-link" data-scroll-target="#densnv"><span class="header-section-number">5.2</span> densnv</a></li>
+  <li><a href="#denhotspots" id="toc-denhotspots" class="nav-link" data-scroll-target="#denhotspots"><span class="header-section-number">5.3</span> denhotspots</a></li>
+  <li><a href="#deneggs" id="toc-deneggs" class="nav-link" data-scroll-target="#deneggs"><span class="header-section-number">5.4</span> deneggs</a></li>
+  <li><a href="#popmex" id="toc-popmex" class="nav-link" data-scroll-target="#popmex"><span class="header-section-number">5.5</span> popmex</a></li>
+  <li><a href="#vectorcontrol" id="toc-vectorcontrol" class="nav-link" data-scroll-target="#vectorcontrol"><span class="header-section-number">5.6</span> vectoRcontrol</a></li>
+  <li><a href="#denrisk" id="toc-denrisk" class="nav-link" data-scroll-target="#denrisk"><span class="header-section-number">5.7</span> denrisk</a></li>
+  <li><a href="#epifeatures" id="toc-epifeatures" class="nav-link" data-scroll-target="#epifeatures"><span class="header-section-number">5.8</span> epifeatures</a></li>
+  <li><a href="#climex" id="toc-climex" class="nav-link" data-scroll-target="#climex"><span class="header-section-number">5.9</span> climex</a></li>
+  </ul></li>
   <li><a href="#conclusión" id="toc-conclusión" class="nav-link" data-scroll-target="#conclusión"><span class="header-section-number">6</span> Conclusión</a></li>
   </ul>
 </nav>
@@ -80,24 +120,137 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="introducción" class="level2" data-number="1">
 <h2 data-number="1" class="anchored" data-anchor-id="introducción"><span class="header-section-number">1</span> Introducción</h2>
-<p>La definición de los escenarios operativos u epidemiológicos de la transmisión persistente y la transmisión activa del dengue se basa en los análisis espaciales de la vigilancia epidemiológica y entomológica del dengue. Los procesos y algoritmos de los hotspots de la transmisión persistente de los virus del dengue en México ya ha sido publicado por <a href="https://www.thelancet.com/journals/lanplh/article/PIIS2542-5196(21)00030-9/fulltext">FAMD</a> y los resultados preliminares de los análisis de los hotspos del vector del dengue en el Puerto de veracruz, ha sido publicado por <a href="https://acaentmex.org/entomologia/revista/2019/EMF/EMF%20497-501.pdf">FADM</a>.</p>
+<p>La palabra universo tiene diferentes significados en nuestra sociedad. En el contexto de R como lenguage de programación para en análisis estadístico, la ciencia de datos y el desarrollo de software, un universo en R significa una colección o ecosistemas de paquetes que comparten una filosofia y un objetivo común. Como ejemplos podemos mencionar el <a href="https://www.tidyverse.org">tidyverse</a>, el <a href="https://www.tidymodels.org">tidymodel</a>, el <a href="https://pharmaverse.org">pharmaverse</a> y el <a href="https://epiverse-trace.r-universe.dev/packages">epiverse</a>. En este contexto el dengueverse es una colección de paquetes o un ecosistema de paquetes que tienen el objetivo de asistir en el análisis estadístico y la ciencia de datos en el programa de prevención y control del dengue proporcionando la bases para el diseño, implementación, escalamiento y evaluación de un modelo estratégico de focalización del dengue en las areas urbanas y metropolitanas de México.</p>
+<p>Originalmente, materia prima del dengueverse eran las bases de datos de la vigilancia epidemiológica y la base de datos de la vigilancia entomológica del Sistema Nacional de Vigilancia Epidemiologica (SINAVE) &amp; Sistema Integral de Monitoreo de Vectores (SIMV), respectivamente. Actualmente el dengueverse esta evolucionando tanto en insumos (base de datos de las acciones vectoriales, base de datos climáticas, bases de datos antropogenicas, bases de datos demograficos, ect), como explorando otros lenguajes de programación como Python.</p>
 </section>
 <section id="actividad" class="level2" data-number="2">
 <h2 data-number="2" class="anchored" data-anchor-id="actividad"><span class="header-section-number">2</span> Actividad</h2>
-<p>Redacción de un Artículo Científico.</p>
+<p>Elaboración de Paquetes en R para la identificación de escenarios operativos o los focos de transmisión.</p>
 </section>
 <section id="producto" class="level2" data-number="3">
 <h2 data-number="3" class="anchored" data-anchor-id="producto"><span class="header-section-number">3</span> Producto</h2>
-<p>Borrador del artículo científico sobre la identificación de escenarios operativos de la transmisión del dengue en areas urbanas usando análisis espaciales</p>
+<p>Paquetes en R publicado en github y CRAN.</p>
 </section>
 <section id="material-métodos" class="level2" data-number="4">
 <h2 data-number="4" class="anchored" data-anchor-id="material-métodos"><span class="header-section-number">4</span> Material &amp; Métodos</h2>
+<p>El procedimiento para la creación del paquete fue desarrollado en R (https://cran.r-project.org/) usando RStudio (https://posit.co/download/rstudio-desktop/) y finalmente publicados de acuerdo con los lineamientos descritos por Wickham (2015) y Peng y Cols (2017) y modificados para este proceso. Como <strong>primer paso</strong> primero se instalaron los siguientes paquetes devtools, roxigen2, testthat, knitr, usethis y rmarkdown. Como <strong>segundo paso</strong> se abrió RStudio, se fue al menú principal y se seleccionó crear un nuevo proyecto en una nueva carpeta, definiendo el tipo de proyecto como un paquete en R (R Package). Este proceso abrió una ventana donde se definió el nombre del paquete y se seleccionó; 1) el tipo de proyecto (un paquete), 2) crear un repositorio en github y 3) la carpeta donde se aloja el proyecto. En este paso tienes dos opciones para crear al paquete: a) puedes seleccionar los scripts de las funciones del paquete si previamente fueron diseñadas, o 2) crear el paquete y después diseñar las funciones del paquete. En todos los paquetes se usó la primera opción. Después presionar el botón de crear proyecto inmediatamente se abrió un nuevo proyecto en RStudio y en el panel inferior derecho de archivos (en RStudio hay cuatro paneles: consola/terminal, files/plots, Ambiente, R Script) se observan cuatro archivos (DESCRIPTION, NAMESPACE, gitignore, Rbuildignore), cuatro carpetas (R, man, .git y .Rproj.user) y el proyecto con el icono de R con el nombre del paquete. Como <strong>tercer paso</strong>, en el panel superior derecho en el menú Git, se seleccionaron todos los archivos incluyendo la función central paquete y se les dio commit. Posteriormente se fue a la carpeta R en el menú archivos, se abrió función por función y se describió el título, el objeto de la función y sus argumentos, se agregó la descripción del paquete y se añadió la licencia MIT. Posteriormente se seleccionaron los archivos en el menú GIT (panel superior derecho), se les dio commit y se corrió la función devtools::document para para fijar todos los cambios en los archivos finales. Como <strong>cuarto paso</strong> se creó un nuevo repositorio en la página de GitHub con el mismo nombre del paquete y entonces el repositorio local del paquete deneggs se sincronizó con el repositorio del mismo nombre creado en GitHub a través de escribir primero la dirección del paquete de github (git remote add origin git@github.com:fdzul/deneggs.git) y después darle push (git push -u origin master) en la terminal del panel izquierdo inferior de RStudio. Finalmente, el paquete aparece publicado en la página de GitHub (https://github.com/fdzul/deneggs). Como quinto paso, se agregaron más funciones complementarias para fortalecer la funcionalidad del paquete. El proceso fue el siguiente, a) crear las funciones, b) cargarlas en el proyecto, describir los argumentos, documentar la función, darle commit a cada cambio y finalmente correr el comando devtools::document para que queden todos los cambios y se cree la función en la estructura del paquete. La actualización del paquete en la página de GitHub se realiza a través de darel push (git push -u origin master) en la terminal de en RStudio. La documentación de las funciones y la página del paquete esta alojadas en el siguiente link https://fdzul.github.io/deneggs/.</p>
 </section>
 <section id="resultados" class="level2" data-number="5">
 <h2 data-number="5" class="anchored" data-anchor-id="resultados"><span class="header-section-number">5</span> Resultados</h2>
+<p>Los paquetes del dengueverse, la dirección donde esta alojado el paquete y su documentación son proporcionados en la tabla 1.</p>
+<table class="table-striped table-hover caption-top table">
+<caption>Tabla 1. Paquetes del dengueverse</caption>
+<colgroup>
+<col style="width: 34%">
+<col style="width: 24%">
+<col style="width: 24%">
+<col style="width: 17%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Paquete</th>
+<th style="text-align: center;">Lenguaje</th>
+<th style="text-align: left;">Github</th>
+<th style="text-align: left;">Documentación</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">rgeomex</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: left;">https://github.com/fdzul/rgeomex</td>
+<td style="text-align: left;">https://fdzul.github.io/rgeomex/</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">densnv</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: left;">https://github.com/fdzul/densnv</td>
+<td style="text-align: left;">https://fdzul.github.io/densnv/</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">denhotspots</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: left;">https://github.com/fdzul/denhotspots</td>
+<td style="text-align: left;">https://fdzul.github.io/denhotspots/</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">deneggs</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: left;">https://github.com/fdzul/deneggs</td>
+<td style="text-align: left;">https://fdzul.github.io/deneggs/</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">popmex</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: left;">https://github.com/fdzul/popmex</td>
+<td style="text-align: left;">https://fdzul.github.io/popmex/</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">vectoRcontrol</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: left;">https://github.com/fdzul/vectorRcontrol</td>
+<td style="text-align: left;">https://fdzul.github.io/vectoRcontrol/</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">denrisk</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: left;">https://github.com/fdzul/denrisk</td>
+<td style="text-align: left;">https://fdzul.github.io/denrisk/</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">epifeatures</td>
+<td style="text-align: center;">R</td>
+<td style="text-align: left;">https://github.com/fdzul/epifeatures</td>
+<td style="text-align: left;">https://fdzul.github.io/epifeatures</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">climex</td>
+<td style="text-align: center;">Python</td>
+<td style="text-align: left;">https://github.com/fdzul/climex</td>
+<td style="text-align: left;">NA</td>
+</tr>
+</tbody>
+</table>
+<section id="rgeomex" class="level3" data-number="5.1">
+<h3 data-number="5.1" class="anchored" data-anchor-id="rgeomex"><span class="header-section-number">5.1</span> rgeomex</h3>
+<p>El paquete <strong>rgeomex</strong> proporciona las bases de datos geográficos en diversas resoluciones (estados, municipios, localidades, agebs, manzanas, sectores y colonias) del INEGI y el INE. <strong>rgeomex</strong> constituye un paquete transversal de las iniciativas ETVerse e IVAverse. rgeomex, junto con los paquetes proporcionados en la tabla 1 conforman el universo de paquetes del dengueverse del programa de prevención y control del dengue en México.</p>
+</section>
+<section id="densnv" class="level3" data-number="5.2">
+<h3 data-number="5.2" class="anchored" data-anchor-id="densnv"><span class="header-section-number">5.2</span> densnv</h3>
+<p>El objetivo central del paquete <strong>densnv</strong> es realizar el análisis exploratorio de las bases de datos de las Enfermedades Transmitidas por Vector (ETV) e Intoxicación por Veneno de Artrópodos (IVA) del Sistema Nacional de Vigilancia Epidemiológica (SINAVE) de la Secretaría de Salud de México a través de graficos, tablas y mapas con el objetivo de incidir de manera directa en la toma de desiciones racionales y oportunas en los programas de ETVS</p>
+</section>
+<section id="denhotspots" class="level3" data-number="5.3">
+<h3 data-number="5.3" class="anchored" data-anchor-id="denhotspots"><span class="header-section-number">5.3</span> denhotspots</h3>
+<p>El objetivo de paquete <strong>denhotspots</strong> es realizar el análisis espacial de las bases de datos de dengue geocodificadas, entre los análisis que realiza el paquete se encuentra el hotspots analysis a traves del estadístico espacial local <em>getis &amp; ord statistics</em> (<span class="math inline">\(G^{*}\)</span>), las cadenas de transmisión (space-time analysis), y el análisis Log Gaussian Cox Processs Spatial.</p>
+</section>
+<section id="deneggs" class="level3" data-number="5.4">
+<h3 data-number="5.4" class="anchored" data-anchor-id="deneggs"><span class="header-section-number">5.4</span> deneggs</h3>
+<p>El paquete deneggs fue diseñado para generar mapas predictivos del número de huevos o adultos mediante análisis geoestadístico usando ecuaciones diferenciales parciales estocásticas (SPDE) e integracion númerica (Integrated Nested Laplace Approximations = INLA). El objetivo del análisis geoestadístico es predecir la variable de respuesta (huevos o adultos) en áreas o zonas donde no se realizó recolección entomológica, como manzanas donde no se instalan ovitrampas.</p>
+</section>
+<section id="popmex" class="level3" data-number="5.5">
+<h3 data-number="5.5" class="anchored" data-anchor-id="popmex"><span class="header-section-number">5.5</span> popmex</h3>
+<p>El objetivo del paquete <strong>popmex</strong> es proporcionar bases de datos espaciales de población total en <a href="https://h3geo.org">Hexágonos H3</a> del 2021 al 2023.</p>
+</section>
+<section id="vectorcontrol" class="level3" data-number="5.6">
+<h3 data-number="5.6" class="anchored" data-anchor-id="vectorcontrol"><span class="header-section-number">5.6</span> vectoRcontrol</h3>
+<p><strong>vectoRcontrol</strong> es un paquete R diseñado para realizar análisis exploratorios de las bases de datos de control de vectores que lleva a cabo la Secretaría de Salud de México.</p>
+</section>
+<section id="denrisk" class="level3" data-number="5.7">
+<h3 data-number="5.7" class="anchored" data-anchor-id="denrisk"><span class="header-section-number">5.7</span> denrisk</h3>
+<p>El paquete denrisk proporciona bases de datos espaciales de la transmisión potencial del dengue en México.</p>
+</section>
+<section id="epifeatures" class="level3" data-number="5.8">
+<h3 data-number="5.8" class="anchored" data-anchor-id="epifeatures"><span class="header-section-number">5.8</span> epifeatures</h3>
+<p>El objetivo del paquete <strong>epifeatures</strong> es extraer las epi-features de las bases de datos de dengue.</p>
+</section>
+<section id="climex" class="level3" data-number="5.9">
+<h3 data-number="5.9" class="anchored" data-anchor-id="climex"><span class="header-section-number">5.9</span> climex</h3>
+<p>El objetivo del paquete <strong>climex</strong> es descargar las de datos climáticas de México a traves de las clave <a href="https://power.larc.nasa.gov/docs/tutorials/service-data-request/api/">POWER API</a> de <a href="https://power.larc.nasa.gov">NASA POWER</a></p>
+</section>
 </section>
 <section id="conclusión" class="level2" data-number="6">
 <h2 data-number="6" class="anchored" data-anchor-id="conclusión"><span class="header-section-number">6</span> Conclusión</h2>
+<p>La concepción teórica y práctica del dengueverse, como el ETVerse e IVAverse es inspirado por la urgente necesidad de contribuir en políticas públicas y toma de desiciones del Programa de Prevención y Control de las Arbovirosis en México a traves de la programación de algoritmos en R o Python que faciliten al personal de los programas a realizar los análisis estadisticos y la ciencia de datos aplicados a estas ETVs.</p>
 </section>
 
 </main>

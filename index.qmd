@@ -1,5 +1,5 @@
 ---
-title: ""
+title: "Paquetes en R para la identificación de escenarios operativos"
 subtitle: Felipe Antonio Dzul Manzanilla | CVU 6172953
 format: 
   html:
@@ -15,20 +15,92 @@ execute:
 
 ## Introducción
 
-La definición de los escenarios operativos u epidemiológicos de la transmisión persistente y la transmisión activa del dengue se basa en los análisis espaciales de la vigilancia epidemiológica y entomológica del dengue. Los procesos y algoritmos de los hotspots de la transmisión persistente de los virus del dengue en México ya ha sido publicado por [FAMD](https://www.thelancet.com/journals/lanplh/article/PIIS2542-5196(21)00030-9/fulltext) y los resultados preliminares de los análisis de los hotspos del vector del dengue en el Puerto de veracruz, ha sido publicado por [FADM](https://acaentmex.org/entomologia/revista/2019/EMF/EMF%20497-501.pdf).
+La palabra universo tiene diferentes significados en nuestra sociedad. En el contexto de R como lenguage de programación para en análisis estadístico, la ciencia de datos y el desarrollo de software, un universo en R significa una colección o ecosistemas de paquetes que comparten una filosofia y un objetivo común. Como ejemplos podemos mencionar el [tidyverse](https://www.tidyverse.org), el [tidymodel](https://www.tidymodels.org), el [pharmaverse](https://pharmaverse.org) y el [epiverse](https://epiverse-trace.r-universe.dev/packages). En este contexto el dengueverse es una colección de paquetes o un ecosistema de paquetes que tienen el objetivo de asistir en el análisis estadístico y la ciencia de datos en el programa de prevención y control del dengue proporcionando la bases para el diseño, implementación, escalamiento y evaluación de un modelo estratégico de focalización del dengue en las areas urbanas y metropolitanas de México.
+
+
+
+
+Originalmente, materia prima del dengueverse eran las bases de datos de la vigilancia epidemiológica y la base de datos de la vigilancia entomológica del Sistema Nacional de Vigilancia Epidemiologica (SINAVE) & Sistema Integral de Monitoreo de Vectores (SIMV), respectivamente. Actualmente el dengueverse esta evolucionando tanto en insumos (base de datos de las acciones vectoriales, base de datos climáticas, bases de datos antropogenicas, bases de datos demograficos, ect), como explorando otros lenguajes de programación como Python.
+
+
 
 ## Actividad
 
-Redacción de un Artículo Científico.
+Elaboración de Paquetes en R para la identificación de escenarios operativos o los focos de transmisión.
 
 ## Producto
 
-Borrador del artículo científico sobre la identificación de escenarios operativos de la transmisión del dengue en areas urbanas usando análisis espaciales
+Paquetes en R publicado en github y CRAN.
 
 ## Material & Métodos
+
+El procedimiento para la creación del paquete fue desarrollado en R (https://cran.r-project.org/) usando RStudio (https://posit.co/download/rstudio-desktop/) y finalmente publicados de acuerdo con los lineamientos descritos por Wickham (2015) y Peng y Cols (2017) y modificados para este proceso. Como **primer paso** primero se instalaron los siguientes paquetes devtools, roxigen2, testthat, knitr, usethis y rmarkdown. Como **segundo paso** se abrió RStudio, se fue al menú principal y se seleccionó crear un nuevo proyecto en una nueva carpeta, definiendo el tipo de proyecto como un paquete en R (R Package). Este proceso abrió una ventana donde se definió el nombre del paquete y se seleccionó; 1) el tipo de proyecto (un paquete), 2) crear un repositorio en github y 3) la carpeta donde se aloja el proyecto. En este paso tienes dos opciones para crear al paquete: a) puedes seleccionar los scripts de las funciones del paquete si previamente fueron diseñadas, o 2) crear el paquete y después diseñar las funciones del paquete. En todos los paquetes se usó la primera opción. 
+Después presionar el botón de crear proyecto inmediatamente se abrió un nuevo proyecto en RStudio y en el panel inferior derecho de archivos (en RStudio hay cuatro paneles: consola/terminal, files/plots, Ambiente, R Script) se observan cuatro archivos (DESCRIPTION, NAMESPACE, gitignore, Rbuildignore), cuatro carpetas (R, man, .git y .Rproj.user) y el proyecto con el icono de R con el nombre del paquete. 
+Como **tercer paso**, en el panel superior derecho en el menú Git, se seleccionaron todos los archivos incluyendo la función central paquete y se les dio commit. Posteriormente se fue a la carpeta R en el menú archivos, se abrió función por función y se describió el título, el objeto de la función y sus argumentos, se agregó la descripción del paquete y se añadió la licencia MIT. Posteriormente se seleccionaron los archivos en el menú GIT (panel superior derecho), se les dio commit y se corrió la función devtools::document para para fijar todos los cambios en los archivos finales.
+Como **cuarto paso** se creó un nuevo repositorio en la página de GitHub con el mismo nombre del paquete y entonces el repositorio local del paquete deneggs se sincronizó con el repositorio del mismo nombre creado en GitHub a través de escribir primero la dirección del paquete de github (git remote add origin git@github.com:fdzul/deneggs.git) y después darle push (git push -u origin master) en la terminal del panel izquierdo inferior de RStudio. Finalmente, el paquete aparece publicado en la página de GitHub (https://github.com/fdzul/deneggs).
+Como quinto paso, se agregaron más funciones complementarias para fortalecer la funcionalidad del paquete. El proceso fue el siguiente, a) crear las funciones, b) cargarlas en el proyecto, describir los argumentos, documentar la función, darle commit a cada cambio y finalmente correr el comando devtools::document para que queden todos los cambios y se cree la función en la estructura del paquete. La actualización del paquete en la página de GitHub se realiza a través de darel push (git push -u origin master) en la terminal de en RStudio. La documentación de las funciones y la página del paquete esta alojadas en el siguiente link https://fdzul.github.io/deneggs/. 
+
 
 ## Resultados
 
 
+Los paquetes del dengueverse, la dirección donde esta alojado el paquete y su documentación son proporcionados en la tabla 1. 
+
+| Paquete      | Lenguaje | Github | Documentación |
+|:-------------|:--------:|:---------|:------|
+| rgeomex      | R        | https://github.com/fdzul/rgeomex   | https://fdzul.github.io/rgeomex/   |
+| densnv       | R        | https://github.com/fdzul/densnv | https://fdzul.github.io/densnv/  |
+| denhotspots  | R        | https://github.com/fdzul/denhotspots | https://fdzul.github.io/denhotspots/    |
+| deneggs      | R        | https://github.com/fdzul/deneggs | https://fdzul.github.io/deneggs/    |
+| popmex       | R        | https://github.com/fdzul/popmex  | https://fdzul.github.io/popmex/    |
+| vectoRcontrol| R        | https://github.com/fdzul/vectorRcontrol | https://fdzul.github.io/vectoRcontrol/  |
+| denrisk      | R        | https://github.com/fdzul/denrisk | https://fdzul.github.io/denrisk/   |
+| epifeatures  | R        | https://github.com/fdzul/epifeatures | https://fdzul.github.io/epifeatures    |
+| climex       | Python   | https://github.com/fdzul/climex | NA    |
+
+: Tabla 1. Paquetes del dengueverse {.striped .hover}
+
+
+
+### rgeomex
+
+El paquete **rgeomex** proporciona las bases de datos geográficos en diversas resoluciones (estados, municipios, localidades, agebs, manzanas, sectores y colonias) del INEGI y el INE. **rgeomex** constituye un paquete transversal de las iniciativas ETVerse e IVAverse. rgeomex, junto con los paquetes proporcionados en la tabla 1 conforman el universo de paquetes del dengueverse del programa de prevención y control del dengue en México.
+
+### densnv
+
+El objetivo central del paquete **densnv** es realizar el análisis exploratorio de las bases de datos de las Enfermedades Transmitidas por Vector (ETV) e Intoxicación por Veneno de Artrópodos (IVA) del Sistema Nacional de Vigilancia Epidemiológica (SINAVE) de la Secretaría de Salud de México a través de graficos, tablas y mapas con el objetivo de incidir de manera directa en la toma de desiciones racionales y oportunas en los programas de ETVS
+
+### denhotspots
+
+El objetivo de paquete **denhotspots** es realizar el análisis espacial de las bases de datos de dengue geocodificadas, entre los análisis que realiza el paquete se encuentra el hotspots analysis a traves del estadístico espacial local *getis & ord statistics* ($G^{*}$), las cadenas de transmisión (space-time analysis), y el análisis Log Gaussian Cox Processs Spatial.
+
+### deneggs
+
+El paquete deneggs fue diseñado para generar mapas predictivos del número de huevos o adultos mediante análisis geoestadístico usando ecuaciones diferenciales parciales estocásticas (SPDE) e integracion númerica (Integrated Nested Laplace Approximations = INLA). El objetivo del análisis geoestadístico es predecir la variable de respuesta (huevos o adultos) en áreas o zonas donde no se realizó recolección entomológica, como manzanas donde no se instalan ovitrampas.
+
+
+### popmex
+
+El objetivo del paquete **popmex** es proporcionar bases de datos espaciales de población total en [Hexágonos H3](https://h3geo.org) del 2021 al 2023.
+
+
+### vectoRcontrol
+
+**vectoRcontrol** es un paquete R diseñado para realizar análisis exploratorios de las bases de datos de control de vectores que lleva a cabo la Secretaría de Salud de México.
+
+### denrisk 
+
+El paquete denrisk proporciona bases de datos espaciales de la transmisión potencial del dengue en México.
+
+### epifeatures
+
+El objetivo del paquete **epifeatures** es extraer las epi-features de las bases de datos de dengue.
+
+### climex 
+
+El objetivo del paquete **climex** es descargar las de datos climáticas de México a traves de las clave  [POWER API](https://power.larc.nasa.gov/docs/tutorials/service-data-request/api/) de [NASA POWER](https://power.larc.nasa.gov)
+
 ## Conclusión
+
+La concepción teórica y práctica del dengueverse, como el ETVerse e IVAverse es inspirado por la urgente necesidad de contribuir en políticas públicas y toma de desiciones del Programa de Prevención y Control de las Arbovirosis en México a traves de la programación de algoritmos en R o Python que faciliten al personal de los programas a realizar los análisis estadisticos y la ciencia de datos aplicados a estas ETVs.
 
