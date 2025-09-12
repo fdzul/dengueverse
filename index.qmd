@@ -1,0 +1,34 @@
+---
+title: ""
+subtitle: Felipe Antonio Dzul Manzanilla | CVU 6172953
+format: 
+  html:
+      theme: flatly
+      code-fold: true
+      toc: true
+      number-sections: true
+title-block-banner: true
+editor: visual
+execute:
+  freeze: auto
+---
+
+## Introducción
+
+La definición de los escenarios operativos u epidemiológicos de la transmisión persistente y la transmisión activa del dengue se basa en los análisis espaciales de la vigilancia epidemiológica y entomológica del dengue. Los procesos y algoritmos de los hotspots de la transmisión persistente de los virus del dengue en México ya ha sido publicado por [FAMD](https://www.thelancet.com/journals/lanplh/article/PIIS2542-5196(21)00030-9/fulltext) y los resultados preliminares de los análisis de los hotspos del vector del dengue en el Puerto de veracruz, ha sido publicado por [FADM](https://acaentmex.org/entomologia/revista/2019/EMF/EMF%20497-501.pdf).
+
+## Actividad
+
+Redacción de un Artículo Científico.
+
+## Producto
+
+Borrador del artículo científico sobre la identificación de escenarios operativos de la transmisión del dengue en areas urbanas usando análisis espaciales
+
+## Material & Métodos
+
+## Resultados
+
+
+## Conclusión
+
