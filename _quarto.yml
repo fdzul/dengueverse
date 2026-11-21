@@ -38,6 +38,8 @@ website:
         menu:
           - text: densnv
             href: https://fdzul.github.io/densnv/
+          - text: densnv-py (Python)
+            href: https://fdzul.github.io/densnv-py/
           - text: vectoRcontrol
             href: https://github.com/fdzul/vectoRcontrol
           - text: epifeatures

@@ -93,6 +93,16 @@
   desc_en: Exploratory analysis of the SINAVE datasets; active transmission foci, Knox test, Rt and diagnosis of epidemiological scenarios.
   desc_es: Análisis exploratorio de las bases del SINAVE; focos activos de transmisión, prueba de Knox, Rt y diagnóstico de escenarios epidemiológicos.
 
+- title: densnv-py
+  lang: Python
+  stage: surveillance
+  status: experimental
+  logo: images/logos/densnv.png
+  docs: https://fdzul.github.io/densnv-py/
+  repo: https://github.com/fdzul/densnv-py
+  desc_en: Python version of densnv; reading of SINAVE, cases by municipality and locality, and Rt (validated against R).
+  desc_es: Versión en Python de densnv; lectura del SINAVE, casos por municipio y localidad, y Rt (validada contra R).
+
 - title: vectoRcontrol
   lang: R
   stage: surveillance
