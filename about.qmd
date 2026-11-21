@@ -6,7 +6,7 @@ toc: true
 ## Authors
 
 1. **Felipe Antonio Dzul Manzanilla** (maintainer). Instituto Nacional de Salud Pública (INSP), Mexico. [ORCID](https://orcid.org/0000-0002-2085-9141) · <felipe.dzul.m@gmail.com>
-2. **Fabian Correa-Morales**. Centro Nacional de Programas Preventivos y Control de Enfermedades (CENAPRECE), Mexico. [ORCID](https://orcid.org/0000-0002-6193-1242)
+2. **Fabián Correa-Morales**. Centro Nacional de Programas Preventivos y Control de Enfermedades (CENAPRECE), Mexico. [ORCID](https://orcid.org/0000-0002-6193-1242)
 3. **Emmanuel Morales García**. Universidad Veracruzana, Mexico. [ORCID](https://orcid.org/0000-0002-6837-9227)
 4. **Cecilia Cruz López**. Universidad Veracruzana, Mexico. [ORCID](https://orcid.org/0000-0002-9156-5669)
 5. **Héctor Gómez-Dantés**. Instituto Nacional de Salud Pública (INSP), Mexico. [ORCID](https://orcid.org/0000-0002-2025-3641)
