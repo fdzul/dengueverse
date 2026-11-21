@@ -1,0 +1,35 @@
+---
+title: "Acerca de"
+lang: es
+toc: true
+---
+
+## Autores
+
+1. **Felipe Antonio Dzul Manzanilla** (responsable). Instituto Nacional de Salud Pública (INSP), México. [ORCID](https://orcid.org/0000-0002-2085-9141) · <felipe.dzul.m@gmail.com>
+2. **Fabian Correa-Morales**. Centro Nacional de Programas Preventivos y Control de Enfermedades (CENAPRECE), México. [ORCID](https://orcid.org/0000-0002-6193-1242)
+3. **Emmanuel Morales García**. Universidad Veracruzana, México. [ORCID](https://orcid.org/0000-0002-6837-9227)
+4. **Cecilia Cruz López**. Universidad Veracruzana, México. [ORCID](https://orcid.org/0000-0002-9156-5669)
+5. **Héctor Gómez-Dantés**. Instituto Nacional de Salud Pública (INSP), México. [ORCID](https://orcid.org/0000-0002-2025-3641)
+
+## Cita
+
+Cada paquete tiene su propia cita. En R:
+
+``` r
+citation("densnv")
+```
+
+Los paquetes en Python incluyen un archivo `CITATION.cff`, que GitHub muestra como "Cite this repository".
+
+## Datos
+
+Las bases de datos de Enfermedades Transmitidas por Vector del SINAVE son para uso exclusivo del personal de las Secretarías de Salud estatales y del nivel federal. Los polígonos geográficos provienen del [INEGI](https://www.inegi.org.mx/temas/mg) y del [INE](https://pautas.ine.mx/transparencia/mapas/).
+
+## Licencia
+
+Los paquetes se publican con la licencia MIT, excepto knox (GPL ≥ 2).
+
+## Contacto
+
+Errores y preguntas: abre un issue en el repositorio del paquete o escribe a <felipe.dzul.m@gmail.com>.

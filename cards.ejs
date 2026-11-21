@@ -1,0 +1,28 @@
+```{=html}
+<div class="dv-grid">
+<% for (const item of items) { 
+     const root = (typeof templateParams !== 'undefined' && templateParams.root) ? templateParams.root : "";
+     const es = (typeof templateParams !== 'undefined' && templateParams.lang === 'es');
+     const link = item.docs ? item.docs : item.repo;
+     const st = {stable: es ? 'estable' : 'stable', experimental: es ? 'experimental' : 'experimental', legacy: es ? 'heredado' : 'legacy'}[item.status];
+%>
+  <div class="dv-card">
+    <a class="dv-logo" href="<%= link %>">
+      <% if (item.logo) { %><img src="<%= root + item.logo %>" alt="<%= item.title %> logo" loading="lazy"><% } else { %><span class="dv-hex"><%= item.title.replace('-py','').slice(0,3) %></span><% } %>
+    </a>
+    <div class="dv-body">
+      <h4><a href="<%= link %>"><%= item.title %></a></h4>
+      <div class="dv-badges">
+        <span class="dv-badge dv-<%= item.lang.toLowerCase() %>"><%= item.lang %></span>
+        <span class="dv-badge dv-<%= item.status %>"><%= st %></span>
+      </div>
+      <p><%= es ? item.desc_es : item.desc_en %></p>
+      <div class="dv-links">
+        <% if (item.docs) { %><a href="<%= item.docs %>"><i class="bi bi-book"></i> <%= es ? 'Documentación' : 'Docs' %></a><% } %>
+        <a href="<%= item.repo %>"><i class="bi bi-github"></i> GitHub</a>
+      </div>
+    </div>
+  </div>
+<% } %>
+</div>
+```

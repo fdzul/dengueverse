@@ -1,0 +1,92 @@
+project:
+  type: website
+  output-dir: _site
+  resources:
+    - images/
+
+website:
+  title: "dengueverse"
+  site-url: https://fdzul.github.io/dengueverse/
+  repo-url: https://github.com/fdzul/dengueverse
+  description: "R and Python packages for the analysis of dengue transmission and the operational decisions of the dengue prevention and control program in Mexico."
+  page-navigation: true
+  back-to-top-navigation: true
+  open-graph: true
+  navbar:
+    left:
+      - text: Home
+        href: index.qmd
+      - text: Data
+        menu:
+          - text: sinave
+            href: https://github.com/fdzul/sinave
+          - text: rgeomex
+            href: https://fdzul.github.io/rgeomex/
+          - text: rgeomex-py (Python)
+            href: https://fdzul.github.io/rgeomex-py/
+          - text: popmex
+            href: https://fdzul.github.io/popmex/
+          - text: denguedatasets
+            href: https://fdzul.github.io/denguedatasets/
+          - text: denguedatasets-py (Python)
+            href: https://fdzul.github.io/denguedatasets-py/
+          - text: ewarsmx
+            href: https://github.com/fdzul/ewarsmx
+          - text: climex (Python)
+            href: https://github.com/fdzul/climex
+      - text: Surveillance
+        menu:
+          - text: densnv
+            href: https://fdzul.github.io/densnv/
+          - text: vectoRcontrol
+            href: https://github.com/fdzul/vectoRcontrol
+          - text: epifeatures
+            href: https://github.com/fdzul/epifeatures
+          - text: boldenr (legacy)
+            href: https://github.com/fdzul/boldenr
+      - text: Hotspots
+        menu:
+          - text: denhotspots
+            href: https://fdzul.github.io/denhotspots/
+          - text: knox
+            href: https://github.com/fdzul/knox
+      - text: Entomology
+        menu:
+          - text: deneggs
+            href: https://fdzul.github.io/deneggs/
+      - text: Risk
+        menu:
+          - text: denrisk
+            href: https://fdzul.github.io/denrisk/
+          - text: dengueriskcdmx
+            href: https://github.com/fdzul/dengueriskcdmx
+          - text: dengueriskcdmx-py (Python)
+            href: https://fdzul.github.io/dengueriskcdmx-py/
+      - text: Install
+        href: install.qmd
+      - text: About
+        href: about.qmd
+    right:
+      - text: Español
+        menu:
+          - text: Inicio
+            href: es/index.qmd
+          - text: Instalación
+            href: es/instalacion.qmd
+          - text: Acerca de
+            href: es/acerca.qmd
+      - icon: github
+        href: https://github.com/fdzul/dengueverse
+        aria-label: GitHub
+  page-footer:
+    left: "© 2026 dengueverse · MIT license"
+    right: "[R-universe](https://fdzul.r-universe.dev) · [GitHub](https://github.com/fdzul)"
+
+format:
+  html:
+    theme:
+      - cosmo
+      - styles.scss
+    toc: false
+    page-layout: full
+    lang: en

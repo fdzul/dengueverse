@@ -1,0 +1,44 @@
+---
+title: "Installation"
+toc: true
+---
+
+## R
+
+All the R packages of the dengueverse are built on [R-universe](https://fdzul.r-universe.dev), which provides binaries for Windows, macOS and Linux. Add the universe to your repositories and install as usual:
+
+``` r
+options(repos = c(fdzul = "https://fdzul.r-universe.dev",
+                  CRAN  = "https://cloud.r-project.org"))
+
+install.packages(c("rgeomex", "densnv", "denhotspots"))
+```
+
+deneggs needs [INLA](https://www.r-inla.org), which is not on CRAN:
+
+``` r
+install.packages("INLA",
+                 repos = c(getOption("repos"),
+                           INLA = "https://inla.r-inla-download.org/R/stable"),
+                 dep = TRUE)
+install.packages("deneggs")
+```
+
+The development versions can also be installed from GitHub:
+
+``` r
+# install.packages("pak")
+pak::pkg_install("fdzul/densnv")
+```
+
+## Python
+
+The Python packages are installed from GitHub with pip (Python 3.10 or later):
+
+``` bash
+pip install "git+https://github.com/fdzul/rgeomex-py"
+pip install "git+https://github.com/fdzul/denguedatasets-py"
+pip install "git+https://github.com/fdzul/dengueriskcdmx-py"
+```
+
+rgeomex-py downloads the polygons on demand and keeps them in a local cache, so the installation is small.

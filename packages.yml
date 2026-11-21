@@ -1,0 +1,184 @@
+# Catalogue of the dengueverse packages.
+# One entry per package. The cards of index.qmd and es/index.qmd are built from this file.
+# stage: data | surveillance | hotspots | entomology | risk
+# status: stable | experimental | legacy
+
+- title: sinave
+  lang: R
+  stage: data
+  status: experimental
+  logo: ""
+  docs: ""
+  repo: https://github.com/fdzul/sinave
+  desc_en: Reads the eleven datasets of the vector-borne diseases module of SINAVE.
+  desc_es: Lee las once bases de datos del módulo de enfermedades transmitidas por vector del SINAVE.
+
+- title: rgeomex
+  lang: R
+  stage: data
+  status: stable
+  logo: images/logos/rgeomex.png
+  docs: https://fdzul.github.io/rgeomex/
+  repo: https://github.com/fdzul/rgeomex
+  desc_en: Geographic boundaries of Mexico (states, municipalities, localities, AGEB, blocks and electoral sections) from INEGI 2019 and INE 2020.
+  desc_es: Polígonos de México (estados, municipios, localidades, AGEB, manzanas y secciones electorales) del INEGI 2019 y el INE 2020.
+
+- title: rgeomex-py
+  lang: Python
+  stage: data
+  status: stable
+  logo: images/logos/rgeomex.png
+  docs: https://fdzul.github.io/rgeomex-py/
+  repo: https://github.com/fdzul/rgeomex-py
+  desc_en: Python version of rgeomex; the polygons are downloaded on demand as GeoParquet.
+  desc_es: Versión en Python de rgeomex; los polígonos se descargan bajo demanda en GeoParquet.
+
+- title: popmex
+  lang: R
+  stage: data
+  status: stable
+  logo: images/logos/popmex.png
+  docs: https://fdzul.github.io/popmex/
+  repo: https://github.com/fdzul/popmex
+  desc_en: Population of Mexico by municipality, sex and age group (INEGI 2000-2020, CONAPO 1990-2040) and in H3 hexagons, to calculate rates.
+  desc_es: Población de México por municipio, sexo y grupo de edad (INEGI 2000-2020, CONAPO 1990-2040) y en hexágonos H3, para calcular tasas.
+
+- title: denguedatasets
+  lang: R
+  stage: data
+  status: stable
+  logo: images/logos/denguedatasets.png
+  docs: https://fdzul.github.io/denguedatasets/
+  repo: https://github.com/fdzul/denguedatasets
+  desc_en: Open-access dengue surveillance and climate datasets from eleven countries, for research and machine learning.
+  desc_es: Bases de datos abiertas de vigilancia del dengue y clima de once países, para investigación y aprendizaje automático.
+
+- title: denguedatasets-py
+  lang: Python
+  stage: data
+  status: stable
+  logo: images/logos/denguedatasets.png
+  docs: https://fdzul.github.io/denguedatasets-py/
+  repo: https://github.com/fdzul/denguedatasets-py
+  desc_en: Python version of denguedatasets.
+  desc_es: Versión en Python de denguedatasets.
+
+- title: ewarsmx
+  lang: R
+  stage: data
+  status: experimental
+  logo: ""
+  docs: ""
+  repo: https://github.com/fdzul/ewarsmx
+  desc_en: Climatic and epidemiological data to implement EWARS-CSD (early warning and response system) for dengue in Mexico.
+  desc_es: Datos climáticos y epidemiológicos para implementar EWARS-CSD (sistema de alerta temprana y respuesta) para dengue en México.
+
+- title: climex
+  lang: Python
+  stage: data
+  status: experimental
+  logo: ""
+  docs: ""
+  repo: https://github.com/fdzul/climex
+  desc_en: Downloads climatic data of Mexico from the NASA POWER API.
+  desc_es: Descarga datos climáticos de México de la API de NASA POWER.
+
+- title: densnv
+  lang: R
+  stage: surveillance
+  status: stable
+  logo: images/logos/densnv.png
+  docs: https://fdzul.github.io/densnv/
+  repo: https://github.com/fdzul/densnv
+  desc_en: Exploratory analysis of the SINAVE datasets; active transmission foci, Knox test, Rt and diagnosis of epidemiological scenarios.
+  desc_es: Análisis exploratorio de las bases del SINAVE; focos activos de transmisión, prueba de Knox, Rt y diagnóstico de escenarios epidemiológicos.
+
+- title: vectoRcontrol
+  lang: R
+  stage: surveillance
+  status: experimental
+  logo: ""
+  docs: ""
+  repo: https://github.com/fdzul/vectoRcontrol
+  desc_en: Exploratory analysis of the vector control datasets of the Ministry of Health of Mexico.
+  desc_es: Análisis exploratorio de las bases de datos de control de vectores de la Secretaría de Salud de México.
+
+- title: epifeatures
+  lang: R
+  stage: surveillance
+  status: experimental
+  logo: ""
+  docs: ""
+  repo: https://github.com/fdzul/epifeatures
+  desc_en: Extracts the epidemiological features of dengue time series.
+  desc_es: Extrae las características epidemiológicas de las series de tiempo de dengue.
+
+- title: boldenr
+  lang: R
+  stage: surveillance
+  status: legacy
+  logo: ""
+  docs: ""
+  repo: https://github.com/fdzul/boldenr
+  desc_en: Graphs, tables and maps of the dengue bulletin of Veracruz; being replaced by densnv.
+  desc_es: Gráficas, tablas y mapas del boletín de dengue de Veracruz; está siendo reemplazado por densnv.
+
+- title: denhotspots
+  lang: R
+  stage: hotspots
+  status: stable
+  logo: images/logos/denhotspots.png
+  docs: https://fdzul.github.io/denhotspots/
+  repo: https://github.com/fdzul/denhotspots
+  desc_en: Persistent transmission hotspots (Getis-Ord Gi*, Hi), space-time analysis (Knox, SaTScan, transmission chains) and log-Gaussian Cox processes.
+  desc_es: Hotspots de transmisión persistente (Getis-Ord Gi*, Hi), análisis espacio-temporal (Knox, SaTScan, cadenas de transmisión) y procesos log-Gaussianos de Cox.
+
+- title: knox
+  lang: R
+  stage: hotspots
+  status: stable
+  logo: ""
+  docs: ""
+  repo: https://github.com/fdzul/knox
+  desc_en: Knox test for space-time interaction.
+  desc_es: Prueba de Knox de interacción espacio-temporal.
+
+- title: deneggs
+  lang: R
+  stage: entomology
+  status: stable
+  logo: images/logos/deneggs.png
+  docs: https://fdzul.github.io/deneggs/
+  repo: https://github.com/fdzul/deneggs
+  desc_en: Predictive maps of the number of eggs or adults of Aedes aegypti where no collection was made (geostatistics with INLA-SPDE).
+  desc_es: Mapas predictivos del número de huevos o adultos de Aedes aegypti donde no hubo colecta (geoestadística con INLA-SPDE).
+
+- title: denrisk
+  lang: R
+  stage: risk
+  status: experimental
+  logo: ""
+  docs: https://fdzul.github.io/denrisk/
+  repo: https://github.com/fdzul/denrisk
+  desc_en: Spatial datasets of the potential transmission of dengue in Mexico.
+  desc_es: Bases de datos espaciales de la transmisión potencial del dengue en México.
+
+- title: dengueriskcdmx
+  lang: R
+  stage: risk
+  status: stable
+  logo: images/logos/dengueriskcdmx.png
+  docs: ""
+  repo: https://github.com/fdzul/dengueriskcdmx
+  desc_en: Data, rasters and code of the dengue transmission risk map of the Mexico City Metropolitan Area.
+  desc_es: Datos, rásteres y código del mapa de riesgo de transmisión de dengue de la Zona Metropolitana del Valle de México.
+
+- title: dengueriskcdmx-py
+  lang: Python
+  stage: risk
+  status: stable
+  logo: images/logos/dengueriskcdmx.png
+  docs: https://fdzul.github.io/dengueriskcdmx-py/
+  repo: https://github.com/fdzul/dengueriskcdmx-py
+  desc_en: Python version of dengueriskcdmx.
+  desc_es: Versión en Python de dengueriskcdmx.
