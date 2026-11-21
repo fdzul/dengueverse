@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 260" font-family="Inter, system-ui, sans-serif" role="img">
+<defs><marker id="a" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#8a8a8a"/></marker></defs>
+<rect x="10" y="85" width="160" height="90" rx="10" fill="#3C5A80"/><text x="90.0" y="117.0" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">1. Datos</text><text x="90.0" y="135.0" text-anchor="middle" font-size="12" font-weight="400" fill="#fff">SINAVE, INEGI/INE,</text><text x="90.0" y="153.0" text-anchor="middle" font-size="12" font-weight="400" fill="#fff">población, clima</text>
+<path d="M170,130 C209.0,130 209.0,50 248,50" stroke="#8a8a8a" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<rect x="250" y="15" width="200" height="70" rx="10" fill="#B3261E"/><text x="350.0" y="46.0" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">2. Vigilancia</text><text x="350.0" y="64.0" text-anchor="middle" font-size="12" font-weight="400" fill="#fff">focos, Knox, Rt, escenarios</text>
+<path d="M170,130 C209.0,130 209.0,130 248,130" stroke="#8a8a8a" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<rect x="250" y="95" width="200" height="70" rx="10" fill="#6E4C8C"/><text x="350.0" y="126.0" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">3. Hotspots</text><text x="350.0" y="144.0" text-anchor="middle" font-size="12" font-weight="400" fill="#fff">Gi*, cadenas, SaTScan</text>
+<path d="M170,130 C209.0,130 209.0,210 248,210" stroke="#8a8a8a" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<rect x="250" y="175" width="200" height="70" rx="10" fill="#2E7D5B"/><text x="350.0" y="206.0" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">4. Entomología</text><text x="350.0" y="224.0" text-anchor="middle" font-size="12" font-weight="400" fill="#fff">huevos y adultos (INLA)</text>
+<path d="M450,130 C484.0,130 484.0,130 518,130" stroke="#8a8a8a" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<path d="M450,210 C484.0,210 484.0,140 518,140" stroke="#8a8a8a" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<rect x="520" y="95" width="150" height="70" rx="10" fill="#C77D1A"/><text x="595.0" y="126.0" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">5. Riesgo</text><text x="595.0" y="144.0" text-anchor="middle" font-size="12" font-weight="400" fill="#fff">mapas de riesgo</text>
+<path d="M450,50 C584.0,50 584.0,115 718,115" stroke="#8a8a8a" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<path d="M670,130 C694.0,130 694.0,130 718,130" stroke="#8a8a8a" stroke-width="2" fill="none" marker-end="url(#a)"/>
+<rect x="720" y="80" width="170" height="100" rx="10" fill="#2B2B2B"/><text x="805.0" y="117.0" text-anchor="middle" font-size="15" font-weight="700" fill="#fff">Estrategia</text><text x="805.0" y="135.0" text-anchor="middle" font-size="12" font-weight="400" fill="#fff">operativa</text><text x="805.0" y="153.0" text-anchor="middle" font-size="12" font-weight="400" fill="#fff">focal · barrido · integral</text>
+</svg>
