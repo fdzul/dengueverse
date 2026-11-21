@@ -1,27 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://fdzul.github.io/dengueverse/es/instalacion.html</loc>
-    <lastmod>2026-11-21T02:55:00.831Z</lastmod>
-  </url>
-  <url>
-    <loc>https://fdzul.github.io/dengueverse/es/acerca.html</loc>
-    <lastmod>2026-11-21T18:09:42.786Z</lastmod>
+    <loc>https://fdzul.github.io/dengueverse/index.html</loc>
+    <lastmod>2026-11-21T23:21:32.182Z</lastmod>
   </url>
   <url>
     <loc>https://fdzul.github.io/dengueverse/install.html</loc>
-    <lastmod>2026-11-21T02:55:00.828Z</lastmod>
+    <lastmod>2026-11-21T23:21:32.182Z</lastmod>
   </url>
   <url>
-    <loc>https://fdzul.github.io/dengueverse/index.html</loc>
-    <lastmod>2026-11-21T02:57:06.193Z</lastmod>
+    <loc>https://fdzul.github.io/dengueverse/es/acerca.html</loc>
+    <lastmod>2026-11-21T23:21:32.180Z</lastmod>
   </url>
   <url>
-    <loc>https://fdzul.github.io/dengueverse/about.html</loc>
-    <lastmod>2026-11-21T18:09:42.786Z</lastmod>
+    <loc>https://fdzul.github.io/dengueverse/es/instalacion.html</loc>
+    <lastmod>2026-11-21T23:21:32.180Z</lastmod>
   </url>
   <url>
     <loc>https://fdzul.github.io/dengueverse/es/index.html</loc>
-    <lastmod>2026-11-21T02:55:00.830Z</lastmod>
+    <lastmod>2026-11-21T23:21:32.180Z</lastmod>
+  </url>
+  <url>
+    <loc>https://fdzul.github.io/dengueverse/about.html</loc>
+    <lastmod>2026-11-21T23:21:32.180Z</lastmod>
   </url>
 </urlset>
