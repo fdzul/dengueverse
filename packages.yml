@@ -27,11 +27,11 @@
   lang: Python
   stage: data
   status: stable
-  logo: images/logos/rgeomex.png
+  logo: images/logos/rgeomex-py.png
   docs: https://fdzul.github.io/rgeomex-py/
   repo: https://github.com/fdzul/rgeomex-py
-  desc_en: Python version of rgeomex; the polygons are downloaded on demand as GeoParquet.
-  desc_es: Versión en Python de rgeomex; los polígonos se descargan bajo demanda en GeoParquet.
+  desc_en: Geographic boundaries of Mexico (states, municipalities, localities, AGEB, blocks and electoral sections) from INEGI 2019 and INE 2020.
+  desc_es: Polígonos de México (estados, municipios, localidades, AGEB, manzanas y secciones electorales) del INEGI 2019 y el INE 2020.
 
 - title: popmex
   lang: R
