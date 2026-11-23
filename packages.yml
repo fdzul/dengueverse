@@ -43,6 +43,16 @@
   desc_en: Population of Mexico by municipality, sex and age group (INEGI 2000-2020, CONAPO 1990-2040) and in H3 hexagons, to calculate rates.
   desc_es: Población de México por municipio, sexo y grupo de edad (INEGI 2000-2020, CONAPO 1990-2040) y en hexágonos H3, para calcular tasas.
 
+- title: popmex-py
+  lang: Python
+  stage: data
+  status: stable
+  logo: images/logos/popmex-py.png
+  docs: https://fdzul.github.io/popmex-py/
+  repo: https://github.com/fdzul/popmex-py
+  desc_en: Population of Mexico by municipality, sex and age group (INEGI 2000-2020, CONAPO 1990-2040), in H3 hexagons and LandScan (1 km), to calculate rates.
+  desc_es: Población de México por municipio, sexo y grupo de edad (INEGI 2000-2020, CONAPO 1990-2040), en hexágonos H3 y LandScan (1 km), para calcular tasas.
+
 - title: denguedatasets
   lang: R
   stage: data
