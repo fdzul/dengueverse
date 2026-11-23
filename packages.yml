@@ -73,16 +73,15 @@
   desc_en: Climatic and epidemiological data to implement EWARS-CSD (early warning and response system) for dengue in Mexico.
   desc_es: Datos climáticos y epidemiológicos para implementar EWARS-CSD (sistema de alerta temprana y respuesta) para dengue en México.
 
-- title: climex
+- title: climex-py
   lang: Python
   stage: data
   status: experimental
-  logo: ""
-  docs: ""
-  repo: https://github.com/fdzul/climex
-  desc_en: Downloads climatic data of Mexico from the NASA POWER API.
-  desc_es: Descarga datos climáticos de México de la API de NASA POWER.
-
+  logo: images/logos/climex-py.png
+  docs: https://fdzul.github.io/climex-py/
+  repo: https://github.com/fdzul/climex-py
+  desc_en: Climate data of Mexico from the NASA POWER API (temperature, precipitation, humidity, wind, radiation) for the 2,465 municipalities or any set of points.
+  desc_es: Datos climáticos de México de la API de NASA POWER (temperatura, precipitación, humedad, viento, radiación) para los 2,465 municipios o cualquier conjunto de puntos.
 - title: densnv
   lang: R
   stage: surveillance
