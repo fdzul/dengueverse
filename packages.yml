@@ -106,7 +106,7 @@
   lang: Python
   stage: surveillance
   status: experimental
-  logo: images/logos/densnv.png
+  logo: images/logos/densnv-py.png
   docs: https://fdzul.github.io/densnv-py/
   repo: https://github.com/fdzul/densnv-py
   desc_en: Python version of densnv; reading of SINAVE, cases by municipality and locality, and Rt (validated against R).
